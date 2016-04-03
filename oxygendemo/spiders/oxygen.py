@@ -154,7 +154,7 @@ class OxygenSpider(CrawlSpider):
                 for k in range(0, len(tagAs)):
                     # Get subcategory's name
                     cat2 = tagAs.eq(k).text().lower()
-                    if cat2 == 'all':
+                    if cat2 == 'all' or cat2 == 'new in':
                         continue
 
                     href = self.base_url + tagAs.eq(k).attr['href']
